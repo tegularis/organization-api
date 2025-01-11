@@ -1,0 +1,9 @@
+services:
+  app:
+    restart: "always"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "organization-app"
+    ports:
+      - 7765:8527
