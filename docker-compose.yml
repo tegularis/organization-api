@@ -4,7 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: bash -c "alembic upgrade head"
     container_name: "organization-app"
     ports:
       - 7765:8527
