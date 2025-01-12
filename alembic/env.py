@@ -9,17 +9,16 @@ from src.pkg.database.models import Base
 
 config = context.config
 
-# Interpret the config file for Python logging.
-# This line sets up loggers basically.
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
 
 target_metadata = Base.metadata
 
-cfg = Config(path="../config/config.yml").load()
-url = (f"postgresql://{cfg['database']['user']}:{cfg['database']['password']}@{cfg['database']['host']}:"
+cfg = Config(path="config/config.yml").load()
+url = (f"postgresql+psycopg2://{cfg['database']['user']}:{cfg['database']['password']}@{cfg['database']['host']}:"
        f"{cfg['database']['port']}/{cfg['database']['name']}")
+config.set_main_option('sqlalchemy.url', url)
 
 
 
