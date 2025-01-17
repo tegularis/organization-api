@@ -2,7 +2,7 @@
 
  A simple API app for fetching organizations, buildings and activities data
 
-• <a href='https://app.swaggerhub.com/apis-docs/TEGULARISWAY/organization-api/1'>Documentation</a>
+• <a href='https://app.swaggerhub.com/apis-docs/SILENTIUM/organization-api/1'>Documentation</a>
  
 ___
 
